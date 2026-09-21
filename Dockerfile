@@ -5,11 +5,11 @@ WORKDIR /app
 # نصب library های مورد نیاز
 RUN pip install --no-cache-dir pyTelegramBotAPI
 
-# کپی کردن کد ربات
-COPY casinomeowicop_fixed.py .
+# دایرکتوری برای دیتابیس رو ساخت و صحیح تنظیم کن
+RUN mkdir -p /data && chmod 755 /data
 
-# تنظیم دایرکتوری برای دیتابیس
-RUN mkdir -p /data
+# کپی کردن کد ربات
+COPY casinomeowicop.py .
 
 # اجرای ربات
-CMD ["python", "casinomeowicop_fixed.py"]
+CMD ["python", "casinomeowicop.py"]
