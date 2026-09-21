@@ -32,7 +32,7 @@ db_lock = threading.RLock()
 
 # ================= دیتابیس (بهبود یافته برای Railway) =================
 # برای Railway، دیتابیس باید در دایرکتوری persist شود
-DB_PATH = os.getenv('DB_PATH', '/data/casino_meowi.db')
+DB_PATH = os.getenv('DB_PATH', './casino_meowi.db')
 DB_DIR = os.path.dirname(DB_PATH)
 
 # اطمینان از وجود دایرکتوری
