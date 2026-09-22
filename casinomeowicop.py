@@ -51,7 +51,7 @@ bot = telebot.TeleBot(TOKEN)
 db_lock = threading.RLock()
 
 conn = sqlite3.connect(
-    "casino_meowi.db",
+    "/data/casino_meowi.db",
     check_same_thread=False
 )
 
